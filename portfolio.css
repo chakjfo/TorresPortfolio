@@ -1,0 +1,353 @@
+/* appling google font over the website  */
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+        margin: 0;
+        padding: 0;
+}
+
+/* Make the navbar sticky and transparent */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: rgba(255, 255, 255, 0.7); /* 70% opacity for a lighter transparent background */
+    box-shadow: none; /* Optional: Remove shadow if you want it fully transparent */
+    width: 100%; /* Ensure the navbar spans the full width */
+    transition: background-color 0.3s ease; /* Smooth transition when background color changes on scroll */
+}
+
+/* Change the navbar background to a more solid color when scrolling */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Less transparent when scrolling */
+}
+
+/* styling menu icon */
+.nav-menu{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+/* styling navbar links  */
+.navbar-nav a{
+    color: black;
+    position: relative;
+    font-size: 1.2rem;
+}
+.navbar-nav a:hover{
+    color: #fca61f;
+}
+.navbar-nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #fca61f;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar-nav a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+/* styling home section starts */
+.home {
+    background-image: url('bg1.png');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    height: 100vh; /* Makes the section take up the full height of the viewport */
+    color: white; /* Optional: change text color to contrast with the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .row {
+    width: 100%;
+    height: 100%;
+}
+
+.home .col-200,
+.home .col-md-6 {
+    z-index: 1; /* Ensures text stays on top of the background image */
+}
+
+/* Image styling for Macky Torres' picture */
+.home-img {
+    width: 100%; /* Make image take the full width of the column */
+    height: 100%; /* Make the image take the full height of the section */
+    object-fit: cover; /* Ensures the image fills the space proportionally */
+    object-position: center; /* Keeps the image centered */
+}
+
+.home h2{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+    color: #fffff;
+}
+.c-orange{
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* adding animation to home section image  */
+.home img{
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Skill Section */
+.skill{
+    background-color: rgb(234, 234, 249); /* Background color */
+}
+
+/* Text styling */
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.heading p{
+    font-size: 1.3rem;
+    text-align: justify;  /* Justify text */
+}
+
+/* Image Slider Container */
+.carousel-inner img {
+    width: 100%;  /* Ensure images cover the container */
+    height: auto;
+}
+
+/* Make the image slider container smaller and fit the section */
+#carouselExample {
+    max-width: 100%;  /* Ensures it doesn't exceed container width */
+    margin: 0 auto;   /* Center the slider */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fca61f;  /* Customize control buttons */
+}
+
+/* Make slider container smaller for smaller screens */
+@media (max-width: 767px) {
+    #carouselExample {
+        max-width: 90%;  /* Reduce width on smaller screens */
+    }
+}
+
+
+/* portfolio section starts */
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #fca61f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* testimonial section starts */
+.testimonial img:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 1s;
+}
+.testimonial h4{
+    color: #3f396d;
+}
+.testimonial i{
+    font-size: 2.9rem;
+    color: #fca61f;
+
+}
+.testimonial .nextprev-btn{
+    border: none;
+    background-color: #fff;
+}
+.prev:hover,.prev-btn:hover{
+    color:#6f34fe;
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+.next:hover,.next-btn:hover{
+    color:#6f34fe;
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+
+/* blog section starts */
+.blog{
+    background-color: #f2f2ff;
+}
+.blog .blogpost .card{
+    border: none;
+    border-radius: 5%;
+}
+.nav-bg{
+    background-color: #fff;
+}
+
+.blog .blogpost small{
+    color: #6f34fe;
+    font-size: 1.1rem;
+}
+.blog .blogpost h4,.blogpost a{
+    color: #3f396d;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.blogpost a:hover{
+    color: #fca61f;
+}
+.blog .blogpost .read-more-btn{
+    text-decoration: none;
+    color: #fca61f;
+    font-size: 1.1rem;
+}
+.blog .blogpost .read-more-btn:hover{
+    color: #6f34fe;
+}
+/* styling modal group  */
+.btn-c{
+    margin-left: 94%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: -3%;
+}
+.btn-c i{
+    color: #fca61f;
+}
+.modal-body .content span{
+    font-size: 1rem;
+}
+.modal-body .content small{
+    font-size: 1rem;
+    color: #6f34fe;
+}
+/* contact section starts */
+.contact{
+    background-color: #f3f3f3;
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+.contact-details p{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+/* footer section starts */
+footer{
+    background-color: #211e39;
+}
+
+footer .link-group a{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+footer .link-group a:hover{
+    color: #fca61f;
+}
+.social-links button{
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px 15px;
+}
+.social-links .dribble{
+    color: #f33a7e;
+}
+.social-links button:hover{
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.social-links .dribble:hover{
+    background-color: #f33a7e;
+}
+.social-links .whatsapp{
+    color: #25D366;
+}
+.social-links .whatsapp:hover{
+    background-color: #25D366;
+}
+.social-links .behance{
+    color: #255afc;
+}
+.social-links .behance:hover{
+    background-color: #255afc;
+}
+
+/* styling back to top button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #fca61f;
+    color: #fff;
+    animation: pulse 3s infinite;
+}
